@@ -7,8 +7,8 @@ pipeline {
     }
 
     environment {
-        TF_VAR_region = 'us-east-1'                 // Terraform region variable
-        TF_VAR_key_name = 'mykey'                   // Terraform key pair
+        TF_VAR_region = 'eu-north-1'                 // Terraform region variable
+        TF_VAR_key_name = 'ansible'                   // Terraform key pair
         TF_IN_AUTOMATION = 'true'                   // Disable interactive prompts for Terraform
         ANSIBLE_HOST_KEY_CHECKING = 'False'         // Disable SSH prompt for Ansible
         ANSIBLE_REMOTE_USER = 'ubuntu'              // Remote SSH user for Ansible
