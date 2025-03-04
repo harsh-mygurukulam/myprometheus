@@ -18,7 +18,7 @@ module "instances" {
   source = "./modules/instances"
   ami_id = "ami-0e1bed4f06a3b463d"
   instance_type = "t2.micro"
-  key_name = "mykey"
+  key_name = "ansible"
   public_subnet_id  = module.networking.public_subnet_ids[0]
   private_subnet_id = module.networking.private_subnet_ids[0]
   public_sg_id  = module.security.public_sg_id
