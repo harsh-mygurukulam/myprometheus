@@ -10,11 +10,14 @@ groups:
           summary: "High CPU Usage"
           description: "CPU usage is above 80%"
 
-      - alert: InstanceDown
+      
+  - name: instance_down
+    rules:
+      - alert: "Instance Down"
         expr: up == 0
         for: 1m
         labels:
           severity: critical
         annotations:
-          summary: "Instance Down"
-          description: "The instance is down for more than 1 minute"
+          summary: "Instance {{ $labels.instance }} is down"
+          description: "{{ $labels.instance }} is not reachable for more than 1 minute"
